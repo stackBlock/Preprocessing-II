@@ -1,17 +1,14 @@
 
-
-
-
-
-
-
-
-
-
-
 .home {
 
   .header {
+
+    @media ( max-width: 500px ) {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 5%;
+    }
+
     padding-bottom: 10px;
     border-bottom: 2px dashed lightgray;
     img {
@@ -31,19 +28,32 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media ( max-width: 500px ) {
+      flex-direction: column;
+    } 
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media ( max-width: 500px ) {
+        width: 90%;
+        justify-content: center;
+        margin-left: 5%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      
 
       img {
         border-radius: 10px;
+      }
+      @media ( max-width: 500px ) {
+        width: 90%;
+        justify-content: center;
+        margin-left: 5%;
       }
     }
   }
@@ -52,27 +62,60 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media ( max-width: 500px ) {
+      flex-direction: column-reverse;
+
+      
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media ( max-width: 500px ) {
+        width: 90%;
+        justify-content: center;
+        margin-left: 5%;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media ( max-width: 500px ) {
+        width: 90%;
+        justify-content: center;
+        margin-left: 5%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media ( max-width: 500px ) {
+      flex-direction: column;
+      width: 90%;
+    } 
 
     img {
       border-radius: 10px;
+      @media ( max-width: 500px ) {
+        width: 100%;
+        justify-content: center;
+        
+      }
     }
   }
 
   .content-pick {
+    @media ( max-width: 500px ) {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 5%;
+    }
+
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
@@ -81,6 +124,21 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      div {
+        width: 200px;
+        height: 30px;
+        background: turquoise;
+        font-size: 15px;
+        text-align: center;
+        padding-top: 10px;
+        border-radius: 50%;
+        
+      }
+      @media ( max-width: 500px ) {
+        width: 75%;
+
+        
+      }
     }
   }
 }// home
